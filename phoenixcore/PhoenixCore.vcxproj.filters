@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ComponentManager.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Win32ComponentLoader.cpp">
+      <Filter>ComponentLoaders</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ComponentManager.h" />
+    <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\ComponentNode.h" />
+    <ClInclude Include="include\IComponentLoader.h">
+      <Filter>ComponentLoaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ComponentLoaders">
+      <UniqueIdentifier>{486f8989-ad5f-4635-9e5d-0df7d6ad9622}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
