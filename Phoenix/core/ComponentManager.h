@@ -18,7 +18,7 @@ public:
 
     void registerComponent(CUID identifier, void *component, ComponentFinalizer finalizer);
 
-    inline void registerComponent(CUID identifier, void *component) { registerComponent(identifier, component, DefaultHeapComponentFinalizer); }
+    inline void registerComponentOnHeap(CUID identifier, void *component) { registerComponent(identifier, component, DefaultHeapComponentFinalizer); }
 
     void *queryComponent(CUID identifier);
 

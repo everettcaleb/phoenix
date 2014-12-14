@@ -14,6 +14,7 @@ struct ComponentNode
     ComponentNode *previous;
 };
 
+#define DefaultNullComponentFinalizer 0
 void DefaultHeapComponentFinalizer(void *component);
 
 #endif //INCLUDE_PHOENIX_COMPONENTNODE_H

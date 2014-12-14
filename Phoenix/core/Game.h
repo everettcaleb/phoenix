@@ -3,6 +3,7 @@
 #define INCLUDE_PHOENIX_GAME_H
 
 #include "ComponentManager.h"
+#include "EventManager.h"
 
 class Game {
 private:
@@ -12,7 +13,9 @@ private:
 public:
     ~Game(){}
 
+    static bool IsForegroundApp;
     static ComponentManager *Components;
+    static EventManager *Events;
 };
 
 #endif //INCLUDE_PHOENIX_GAME_H

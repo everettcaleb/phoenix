@@ -3,6 +3,8 @@
 #include "../core/IComponentLoader.h"
 #include <Windows.h>
 
+//========================================================================================================
+
 class Win32ComponentLoader : public IComponentLoader
 {
 public:

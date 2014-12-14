@@ -14,6 +14,12 @@
     <ClCompile Include="core\Game.cpp">
       <Filter>core</Filter>
     </ClCompile>
+    <ClCompile Include="win32\Win32GameLoop.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\EventManager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="win32">
@@ -40,6 +46,24 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\CUID.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\EVID.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\EventManager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\IEventSubscriber.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\IGameLoop.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="win32\Win32GameLoop.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="core\EventSubscriberNode.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>

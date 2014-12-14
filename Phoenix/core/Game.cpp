@@ -1,3 +1,5 @@
 #include "Game.h"
 
-ComponentManager *Game::Components;
+bool Game::IsForegroundApp = true;
+ComponentManager *Game::Components = 0;
+EventManager *Game::Events = 0;

@@ -188,8 +188,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="core\ComponentManager.cpp" />
+    <ClCompile Include="core\EventManager.cpp" />
     <ClCompile Include="core\Game.cpp" />
     <ClCompile Include="win32\Win32ComponentLoader.cpp" />
+    <ClCompile Include="win32\Win32GameLoop.cpp" />
     <ClCompile Include="win32\Win32Window.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
@@ -197,8 +199,14 @@
     <ClInclude Include="core\ComponentManager.h" />
     <ClInclude Include="core\ComponentNode.h" />
     <ClInclude Include="core\CUID.h" />
+    <ClInclude Include="core\EventManager.h" />
+    <ClInclude Include="core\EventSubscriberNode.h" />
+    <ClInclude Include="core\EVID.h" />
     <ClInclude Include="core\Game.h" />
     <ClInclude Include="core\IComponentLoader.h" />
+    <ClInclude Include="core\IEventSubscriber.h" />
+    <ClInclude Include="core\IGameLoop.h" />
+    <ClInclude Include="win32\Win32GameLoop.h" />
     <ClInclude Include="win32\Win32Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

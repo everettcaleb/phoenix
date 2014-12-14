@@ -1,4 +1,5 @@
 #include "Win32Window.h"
+#include "../core/Game.h"
 
 #define PHOENIX_WIN32WINDOW_CLASS_NAME TEXT("PhoenixCoreWin32Window")
 #define PHOENIX_WIN32WINDOW_TEXT TEXT("PHOENIX")
@@ -44,6 +45,10 @@ Win32Window *Win32Window::create(HINSTANCE instanceHandle)
     //Create the Window
     window->windowHandle_ = CreateWindow(PHOENIX_WIN32WINDOW_CLASS_NAME, PHOENIX_WIN32WINDOW_TEXT, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, instanceHandle, window);
 
+    //Show it
+    ShowWindow(window->windowHandle_, SW_SHOWDEFAULT);
+    UpdateWindow(window->windowHandle_);
+
     return window;
 }
 
@@ -61,6 +66,19 @@ LRESULT CALLBACK PhoenixWndProc(HWND windowHandle, UINT message, WPARAM wParam, 
 
     case WM_DESTROY:
         PostQuitMessage(0);
+        break;
+
+    case WM_ACTIVATE:
+        if (LOWORD(wParam) != 0) 
+        {
+            Game::IsForegroundApp = true;
+            Game::Events->publishEvent(EVID_SWITCH_TO_FOREGROUND, 0);
+        }
+        else 
+        {
+            Game::IsForegroundApp = false;
+            Game::Events->publishEvent(EVID_SWITCH_TO_BACKGROUND, 0);
+        }
         break;
     }
 
