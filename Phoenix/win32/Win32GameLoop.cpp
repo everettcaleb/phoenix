@@ -33,9 +33,8 @@ void Win32GameLoop::run()
                 deltaTime_ = (float)((double)(timerTick.QuadPart - lastTick.QuadPart) / (double)timerFrequency.QuadPart);
                 deltaTime_ = min(deltaTime_, 0.5f);
 
-                //TODO, trigger tick event
-                //Game::EventManager->publishEvent(EVID_TICK, 0);
-                //Game::EventManager->publishQueuedEvents();
+                Game::Events->publishEvent(EVID_TICK, 0);
+                Game::Events->publishQueuedEvents();
             }
         }
         else 
