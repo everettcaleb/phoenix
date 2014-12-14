@@ -8,6 +8,9 @@
 
 typedef void(*EventDataFinalizer)(void *data);
 
+#define DefaultNullEventDataFinalizer 0
+void DefaultHeapEventDataFinalizer(void *data);
+
 class EventManager 
 {
 private:
@@ -39,14 +42,13 @@ public:
 
     void publishEvent(EVID eventId, void *data);
 
+    inline void queueEventOnHeap(EVID eventId, void *data) { queueEvent(eventId, data, DefaultHeapEventDataFinalizer); }
+
     void queueEvent(EVID eventId, void *data, EventDataFinalizer finalizer);
 
     void publishQueuedEvents();
 
     inline static EventManager *create() { return new EventManager; }
 };
-
-#define DefaultNullEventDataFinalizer 0
-void DefaultHeapEventDataFinalizer(void *data);
 
 #endif //INCLUDE_PHOENIX_EVENTMANAGER_H
