@@ -1,3 +1,3 @@
-#include "include/Game.h"
+#include "Game.h"
 
 ComponentManager *Game::Components;

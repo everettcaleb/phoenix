@@ -1,23 +1,23 @@
-#include "Window.h"
+#include "Win32Window.h"
 
-#define PHOENIX_WINDOW_CLASS_NAME TEXT("PhoenixCoreWindow")
-#define PHOENIX_WINDOW_TEXT TEXT("PHOENIX")
+#define PHOENIX_WIN32WINDOW_CLASS_NAME TEXT("PhoenixCoreWin32Window")
+#define PHOENIX_WIN32WINDOW_TEXT TEXT("PHOENIX")
 
 static LRESULT CALLBACK PhoenixWndProc(HWND windowHandle, UINT message, WPARAM wParam, LPARAM lParam);
 
 //========================================================================================================
 
-Window::~Window() 
+Win32Window::~Win32Window() 
 {
     DestroyWindow(windowHandle_);
 }
 
 //========================================================================================================
 
-Window *Window::create(HINSTANCE instanceHandle)
+Win32Window *Win32Window::create(HINSTANCE instanceHandle)
 {
     //Allocate the object
-    Window *window = new Window;
+    Win32Window *window = new Win32Window;
     window->instanceHandle_ = instanceHandle;
     window->windowHandle_ = 0;
 
@@ -31,7 +31,7 @@ Window *Window::create(HINSTANCE instanceHandle)
     wndClass.hIcon = LoadIcon(instanceHandle, IDI_APPLICATION); //TODO: Change to real icon
     wndClass.hInstance = instanceHandle;
     wndClass.lpfnWndProc = PhoenixWndProc;
-    wndClass.lpszClassName = PHOENIX_WINDOW_CLASS_NAME;
+    wndClass.lpszClassName = PHOENIX_WIN32WINDOW_CLASS_NAME;
     wndClass.style = CS_HREDRAW | CS_VREDRAW;
 
     //Register the class
@@ -41,8 +41,8 @@ Window *Window::create(HINSTANCE instanceHandle)
         return 0;
     }
 
-    //Create the window
-    window->windowHandle_ = CreateWindow(PHOENIX_WINDOW_CLASS_NAME, PHOENIX_WINDOW_TEXT, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, instanceHandle, window);
+    //Create the Window
+    window->windowHandle_ = CreateWindow(PHOENIX_WIN32WINDOW_CLASS_NAME, PHOENIX_WIN32WINDOW_TEXT, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, instanceHandle, window);
 
     return window;
 }
@@ -51,7 +51,7 @@ Window *Window::create(HINSTANCE instanceHandle)
 
 LRESULT CALLBACK PhoenixWndProc(HWND windowHandle, UINT message, WPARAM wParam, LPARAM lParam) 
 {
-    Window *window = (Window*)GetWindowLongPtr(windowHandle, GWLP_USERDATA);
+    Win32Window *window = (Win32Window*)GetWindowLongPtr(windowHandle, GWLP_USERDATA);
     
     switch (message) 
     {

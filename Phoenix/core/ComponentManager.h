@@ -2,6 +2,7 @@
 #ifndef INCLUDE_PHOENIX_COMPONENTMANAGER_H
 #define INCLUDE_PHOENIX_COMPONENTMANAGER_H
 
+#include "CUID.h"
 #include "ComponentNode.h"
 
 class ComponentManager
@@ -15,8 +16,11 @@ private:
 public:
     ~ComponentManager();
 
-    void registerComponent(unsigned int identifier, void *component, ComponentFinalizer finalizer);
-    void *queryComponent(unsigned int identifier);
+    void registerComponent(CUID identifier, void *component, ComponentFinalizer finalizer);
+
+    inline void registerComponent(CUID identifier, void *component) { registerComponent(identifier, component, DefaultHeapComponentFinalizer); }
+
+    void *queryComponent(CUID identifier);
 
     inline static ComponentManager *create() { return new ComponentManager(); }
 };

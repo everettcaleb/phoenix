@@ -2,14 +2,18 @@
 #ifndef INCLUDE_PHOENIX_COMPONENTNODE_H
 #define INCLUDE_PHOENIX_COMPONENTNODE_H
 
-typedef void*(*ComponentFinalizer)(void *component);
+#include "CUID.h"
+
+typedef void(*ComponentFinalizer)(void *component);
 
 struct ComponentNode
 {
-    unsigned int identifier;
+    CUID identifier;
     void *component;
     ComponentFinalizer finalizer;
     ComponentNode *previous;
 };
+
+void DefaultHeapComponentFinalizer(void *component);
 
 #endif //INCLUDE_PHOENIX_COMPONENTNODE_H

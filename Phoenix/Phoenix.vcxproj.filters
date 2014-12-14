@@ -2,9 +2,45 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="WinMain.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="win32\Win32Window.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\Win32ComponentLoader.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="core\ComponentManager.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\Game.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h" />
+    <Filter Include="win32">
+      <UniqueIdentifier>{abf5d1ff-b6d3-44c1-a0d2-8ec18f131880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{c879e4de-724d-4f0c-b043-052f3cf4ac55}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="win32\Win32Window.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ComponentManager.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\ComponentNode.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\Game.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\IComponentLoader.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\CUID.h">
+      <Filter>core</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

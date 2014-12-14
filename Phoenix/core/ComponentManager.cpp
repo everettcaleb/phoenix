@@ -1,4 +1,4 @@
-#include "include/ComponentManager.h"
+#include "ComponentManager.h"
 
 //========================================================================================================
 
@@ -19,7 +19,7 @@ ComponentManager::~ComponentManager()
 
 //========================================================================================================
 
-void ComponentManager::registerComponent(unsigned int identifier, void *component, ComponentFinalizer finalizer)
+void ComponentManager::registerComponent(CUID identifier, void *component, ComponentFinalizer finalizer)
 {
     ComponentNode *node = new ComponentNode;
     node->identifier = identifier;
@@ -31,7 +31,7 @@ void ComponentManager::registerComponent(unsigned int identifier, void *componen
 
 //========================================================================================================
 
-void *ComponentManager::queryComponent(unsigned int identifier)
+void *ComponentManager::queryComponent(CUID identifier)
 {
     ComponentNode *temp = lastNode_;
 
@@ -45,4 +45,11 @@ void *ComponentManager::queryComponent(unsigned int identifier)
     }
 
     return 0;
+}
+
+//========================================================================================================
+
+void DefaultHeapComponentFinalizer(void *component)
+{
+    delete component;
 }

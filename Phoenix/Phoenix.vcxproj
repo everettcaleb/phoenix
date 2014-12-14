@@ -71,24 +71,28 @@
     <OutDir>$(SolutionDir)bin\$(ProjectName)-$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
     <TargetName>phoenix</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(ProjectName)-$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
     <TargetName>phoenix</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(ProjectName)-$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
     <TargetName>phoenix</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)bin\$(ProjectName)-$(Platform)-$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)obj\$(ProjectName)-$(Platform)-$(Configuration)\</IntDir>
     <TargetName>phoenix</TargetName>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -183,11 +187,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="core\ComponentManager.cpp" />
+    <ClCompile Include="core\Game.cpp" />
+    <ClCompile Include="win32\Win32ComponentLoader.cpp" />
+    <ClCompile Include="win32\Win32Window.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="core\ComponentManager.h" />
+    <ClInclude Include="core\ComponentNode.h" />
+    <ClInclude Include="core\CUID.h" />
+    <ClInclude Include="core\Game.h" />
+    <ClInclude Include="core\IComponentLoader.h" />
+    <ClInclude Include="win32\Win32Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
