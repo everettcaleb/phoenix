@@ -73,7 +73,7 @@ void EventManager::unregisterSubscriber(IEventSubscriber *subscriber)
     EventSubscriberNode *node = firstNode_;
     while (node != 0) 
     {
-        if (node->subscriber = subscriber)
+        if (node->subscriber == subscriber)
         {
             //First one
             if (prevNode == 0) 
