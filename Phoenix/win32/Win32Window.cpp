@@ -27,7 +27,7 @@ Win32Window *Win32Window::create(HINSTANCE instanceHandle)
     memset(&wndClass, 0, sizeof(WNDCLASSEX));
 
     wndClass.cbSize = sizeof(WNDCLASSEX);
-    wndClass.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wndClass.hbrBackground = (HBRUSH)(COLOR_WINDOWTEXT + 1);
     wndClass.hCursor = LoadCursor(instanceHandle, IDC_ARROW);
     wndClass.hIcon = LoadIcon(instanceHandle, IDI_APPLICATION); //TODO: Change to real icon
     wndClass.hInstance = instanceHandle;
