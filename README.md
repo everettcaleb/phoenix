@@ -7,11 +7,11 @@ Here's some information you need to know.  Right now, you can find an [overview 
 
 - Git (obviously)
 
-** Windows-specific **
+**Windows-specific**
 - Microsoft Visual Studio 2013 Pro/Ultimate (students can get this for [free from Microsoft](http://dreamspark.com/))
 - Windows SDK 7.0A or newer (must include Direct2D/3D stuff, should come with Visual Studio)
 
-** Mac-specific **
+**Mac-specific**
 - Xcode 5+
 
 If you plan on doing any art stuff, or want to manipulate the raw assets in the project, you'll need Adobe Photoshop and Illustrator (CC 2014 editions) which aren't too pricey, and if you're into art you probably have them anyway.
