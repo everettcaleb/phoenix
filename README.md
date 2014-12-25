@@ -16,6 +16,13 @@ Here's some information you need to know.  Right now, you can find an [overview 
 
 If you plan on doing any art stuff, or want to manipulate the raw assets in the project, you'll need Adobe Photoshop and Illustrator (CC 2014 editions) which aren't too pricey, and if you're into art you probably have them anyway.
 
+### Clone Commands (project + dependencies)
+
+Run the following commands to clone the project and its dependencies. This will place the dependencies in the proper location for Xcode.
+
+	git clone git@github.com:/everettcaleb/phoenix
+	git clone git@github.com:/everettcaleb/phoenix-dependencies
+
 ### Licensing
 This project is licensed under the [MIT License](LICENSE), but if you use any of this code or any assets, please don't claim it as your own work, give the author(s) credit.
 
