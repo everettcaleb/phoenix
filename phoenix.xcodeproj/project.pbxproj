@@ -1,0 +1,331 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3CB2FF391A4BD0D100A7815C /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB2FF381A4BD0D100A7815C /* SDL2.framework */; };
+		3CB2FF481A4BD17E00A7815C /* ComponentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF3B1A4BD17E00A7815C /* ComponentManager.cpp */; };
+		3CB2FF491A4BD17E00A7815C /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF3F1A4BD17E00A7815C /* EventManager.cpp */; };
+		3CB2FF4A1A4BD17E00A7815C /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF431A4BD17E00A7815C /* Game.cpp */; };
+		3CB2FF4E1A4BD25B00A7815C /* SDLGameLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF4C1A4BD25B00A7815C /* SDLGameLoop.cpp */; };
+		3CDE59971A4BCD4400C744FB /* MacMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE59961A4BCD4400C744FB /* MacMain.cpp */; };
+		3CDE59991A4BCD4400C744FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDE59981A4BCD4400C744FB /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CB2FF381A4BD0D100A7815C /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = "../phoenix-dependencies/SDL2.framework"; sourceTree = "<group>"; };
+		3CB2FF3B1A4BD17E00A7815C /* ComponentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ComponentManager.cpp; path = Phoenix/core/ComponentManager.cpp; sourceTree = SOURCE_ROOT; };
+		3CB2FF3C1A4BD17E00A7815C /* ComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponentManager.h; path = Phoenix/core/ComponentManager.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF3D1A4BD17E00A7815C /* ComponentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponentNode.h; path = Phoenix/core/ComponentNode.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF3E1A4BD17E00A7815C /* CUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CUID.h; path = Phoenix/core/CUID.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF3F1A4BD17E00A7815C /* EventManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventManager.cpp; path = Phoenix/core/EventManager.cpp; sourceTree = SOURCE_ROOT; };
+		3CB2FF401A4BD17E00A7815C /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventManager.h; path = Phoenix/core/EventManager.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF411A4BD17E00A7815C /* EventSubscriberNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventSubscriberNode.h; path = Phoenix/core/EventSubscriberNode.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF421A4BD17E00A7815C /* EVID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EVID.h; path = Phoenix/core/EVID.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF431A4BD17E00A7815C /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = Phoenix/core/Game.cpp; sourceTree = SOURCE_ROOT; };
+		3CB2FF441A4BD17E00A7815C /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Phoenix/core/Game.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF451A4BD17E00A7815C /* IComponentLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IComponentLoader.h; path = Phoenix/core/IComponentLoader.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF461A4BD17E00A7815C /* IEventSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IEventSubscriber.h; path = Phoenix/core/IEventSubscriber.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF471A4BD17E00A7815C /* IGameLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGameLoop.h; path = Phoenix/core/IGameLoop.h; sourceTree = SOURCE_ROOT; };
+		3CB2FF4C1A4BD25B00A7815C /* SDLGameLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SDLGameLoop.cpp; path = Phoenix/sdl/SDLGameLoop.cpp; sourceTree = SOURCE_ROOT; };
+		3CB2FF4D1A4BD25B00A7815C /* SDLGameLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDLGameLoop.h; path = Phoenix/sdl/SDLGameLoop.h; sourceTree = SOURCE_ROOT; };
+		3CDE598E1A4BCD4400C744FB /* phoenix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = phoenix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CDE59921A4BCD4400C744FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CDE59961A4BCD4400C744FB /* MacMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MacMain.cpp; sourceTree = "<group>"; };
+		3CDE59981A4BCD4400C744FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CDE598B1A4BCD4400C744FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB2FF391A4BD0D100A7815C /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CB2FF3A1A4BD17100A7815C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2FF3B1A4BD17E00A7815C /* ComponentManager.cpp */,
+				3CB2FF3C1A4BD17E00A7815C /* ComponentManager.h */,
+				3CB2FF3D1A4BD17E00A7815C /* ComponentNode.h */,
+				3CB2FF3E1A4BD17E00A7815C /* CUID.h */,
+				3CB2FF3F1A4BD17E00A7815C /* EventManager.cpp */,
+				3CB2FF401A4BD17E00A7815C /* EventManager.h */,
+				3CB2FF411A4BD17E00A7815C /* EventSubscriberNode.h */,
+				3CB2FF421A4BD17E00A7815C /* EVID.h */,
+				3CB2FF431A4BD17E00A7815C /* Game.cpp */,
+				3CB2FF441A4BD17E00A7815C /* Game.h */,
+				3CB2FF451A4BD17E00A7815C /* IComponentLoader.h */,
+				3CB2FF461A4BD17E00A7815C /* IEventSubscriber.h */,
+				3CB2FF471A4BD17E00A7815C /* IGameLoop.h */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		3CB2FF4B1A4BD23800A7815C /* sdl */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2FF4C1A4BD25B00A7815C /* SDLGameLoop.cpp */,
+				3CB2FF4D1A4BD25B00A7815C /* SDLGameLoop.h */,
+			);
+			name = sdl;
+			sourceTree = "<group>";
+		};
+		3CDE59851A4BCD4400C744FB = {
+			isa = PBXGroup;
+			children = (
+				3CB2FF381A4BD0D100A7815C /* SDL2.framework */,
+				3CDE59901A4BCD4400C744FB /* phoenix */,
+				3CDE598F1A4BCD4400C744FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3CDE598F1A4BCD4400C744FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3CDE598E1A4BCD4400C744FB /* phoenix.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CDE59901A4BCD4400C744FB /* phoenix */ = {
+			isa = PBXGroup;
+			children = (
+				3CB2FF4B1A4BD23800A7815C /* sdl */,
+				3CB2FF3A1A4BD17100A7815C /* core */,
+				3CDE59961A4BCD4400C744FB /* MacMain.cpp */,
+				3CDE59981A4BCD4400C744FB /* Images.xcassets */,
+				3CDE59911A4BCD4400C744FB /* Supporting Files */,
+			);
+			path = phoenix;
+			sourceTree = "<group>";
+		};
+		3CDE59911A4BCD4400C744FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3CDE59921A4BCD4400C744FB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3CDE598D1A4BCD4400C744FB /* phoenix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CDE59AB1A4BCD4400C744FB /* Build configuration list for PBXNativeTarget "phoenix" */;
+			buildPhases = (
+				3CDE598A1A4BCD4400C744FB /* Sources */,
+				3CDE598B1A4BCD4400C744FB /* Frameworks */,
+				3CDE598C1A4BCD4400C744FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = phoenix;
+			productName = phoenix;
+			productReference = 3CDE598E1A4BCD4400C744FB /* phoenix.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3CDE59861A4BCD4400C744FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Caleb Everett";
+				TargetAttributes = {
+					3CDE598D1A4BCD4400C744FB = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 3CDE59891A4BCD4400C744FB /* Build configuration list for PBXProject "phoenix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3CDE59851A4BCD4400C744FB;
+			productRefGroup = 3CDE598F1A4BCD4400C744FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3CDE598D1A4BCD4400C744FB /* phoenix */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3CDE598C1A4BCD4400C744FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CDE59991A4BCD4400C744FB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CDE598A1A4BCD4400C744FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CB2FF491A4BD17E00A7815C /* EventManager.cpp in Sources */,
+				3CB2FF4E1A4BD25B00A7815C /* SDLGameLoop.cpp in Sources */,
+				3CDE59971A4BCD4400C744FB /* MacMain.cpp in Sources */,
+				3CB2FF481A4BD17E00A7815C /* ComponentManager.cpp in Sources */,
+				3CB2FF4A1A4BD17E00A7815C /* Game.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3CDE59A91A4BCD4400C744FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3CDE59AA1A4BCD4400C744FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3CDE59AC1A4BCD4400C744FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)-dependencies",
+				);
+				INFOPLIST_FILE = phoenix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3CDE59AD1A4BCD4400C744FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)-dependencies",
+				);
+				INFOPLIST_FILE = phoenix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CDE59891A4BCD4400C744FB /* Build configuration list for PBXProject "phoenix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CDE59A91A4BCD4400C744FB /* Debug */,
+				3CDE59AA1A4BCD4400C744FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CDE59AB1A4BCD4400C744FB /* Build configuration list for PBXNativeTarget "phoenix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3CDE59AC1A4BCD4400C744FB /* Debug */,
+				3CDE59AD1A4BCD4400C744FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3CDE59861A4BCD4400C744FB /* Project object */;
+}
