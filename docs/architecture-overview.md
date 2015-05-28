@@ -15,4 +15,4 @@ The **Model** is the basis of the game, it's a collection of all the code compon
 Here's a diagram showing their interactions:
 ![MVVCCM Diagram](diagrams/mvvccm-architecture.gif)
 
-See my article about the core architecture [here](http://ceverett.me/post/game-core-architecture) for more information.
+See my article about the core architecture [here](post/game-core-architecture) for more information.
