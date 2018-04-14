@@ -15,13 +15,13 @@ private:
     IGameLoop *loop_; // <- borrowed
     EventManager *events_; // <- borrowed
     
-    void OnTick(float deltaTime);
+    void onTick(const float deltaTime);
     
 public:
     Breakout(const ComponentManager *components);
     ~Breakout();
     
-    void HandleEvent(EVID eventId, void *data);
+    void handleEvent(const EVID eventId, void *data);
 };
 
 #endif //INCLUDE_PHOENIX_BREAKOUT_H

@@ -14,19 +14,19 @@ Breakout::~Breakout()
     events_->unregisterSubscriber(this);
 }
 
-void Breakout::HandleEvent(EVID eventId, void *data)
+void Breakout::handleEvent(const EVID eventId, void *data)
 {
     switch(eventId)
     {
         case EVID_TICK:
-            OnTick(loop_->getDeltaTime());
+            onTick(loop_->getDeltaTime());
             break;
         default:
             return;
     }
 }
 
-void Breakout::OnTick(float deltaTime)
+void Breakout::onTick(const float deltaTime)
 {
     renderer_->clear(COLOR_BLACK);
     
