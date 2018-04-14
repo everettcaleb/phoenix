@@ -31,7 +31,7 @@ void ComponentManager::registerComponent(CUID identifier, void *component, Compo
 
 //========================================================================================================
 
-void *ComponentManager::queryComponent(CUID identifier)
+void *ComponentManager::queryComponent(CUID identifier) const
 {
     ComponentNode *temp = lastNode_;
 

@@ -30,10 +30,10 @@ private:
     EventSubscriberNode *firstNode_;
     EventSubscriberNode *lastNode_;
 
-    EventManager();
     EventManager(const EventManager& other) {}
 
 public:
+    EventManager();
     ~EventManager();
 
     void registerSubscriber(IEventSubscriber *subscriber);
@@ -47,8 +47,6 @@ public:
     void queueEvent(EVID eventId, void *data, EventDataFinalizer finalizer);
 
     void publishQueuedEvents();
-
-    inline static EventManager *create() { return new EventManager; }
 };
 
 #endif //INCLUDE_PHOENIX_EVENTMANAGER_H

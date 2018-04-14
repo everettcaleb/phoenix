@@ -1,10 +1,12 @@
 #include "SDLGameLoop.h"
-#include "../core/Game.h"
-
-#include <SDL2/SDL.h>
 #include <math.h>
 
-static void HandleSDLEvent(SDL_Event *ev);
+SDLGameLoop::SDLGameLoop(const ComponentManager *components)
+{
+    deltaTime_ = 0.0f;
+    isForeground_ = true;
+    events_ = (EventManager *)components->queryComponent(CUID_EVENTMANAGER);
+}
 
 //========================================================================================================
 
@@ -17,11 +19,11 @@ void SDLGameLoop::run()
     
     while (ev.type != SDL_QUIT)
     {
-        if (Game::IsForegroundApp)
+        if (isForeground_)
         {
             if (SDL_PollEvent(&ev))
             {
-                HandleSDLEvent(&ev);
+                handleSDLEvent(&ev);
             }
             else
             {
@@ -31,21 +33,21 @@ void SDLGameLoop::run()
                 deltaTime_ = (float)((double)(tick - lastTick) / 1000.0);
                 deltaTime_ = deltaTime_ > 0.5f ? deltaTime_ : 0.5f;
                 
-                Game::Events->publishEvent(EVID_TICK, 0);
-                Game::Events->publishQueuedEvents();
+                events_->publishEvent(EVID_TICK, 0);
+                events_->publishQueuedEvents();
             }
         }
         else
         {
             SDL_WaitEvent(&ev);
-            HandleSDLEvent(&ev);
+            handleSDLEvent(&ev);
         }
     }
 }
 
 //========================================================================================================
 
-void HandleSDLEvent(SDL_Event *ev)
+void SDLGameLoop::handleSDLEvent(SDL_Event *ev)
 {
     switch(ev->type)
     {
@@ -54,14 +56,15 @@ void HandleSDLEvent(SDL_Event *ev)
             {
                 case SDL_WINDOWEVENT_FOCUS_GAINED:
                 case SDL_WINDOWEVENT_ENTER:
-                    Game::IsForegroundApp = true;
+                    isForeground_ = true;
                     break;
                     
                 case SDL_WINDOWEVENT_FOCUS_LOST:
                 case SDL_WINDOWEVENT_LEAVE:
-                    Game::IsForegroundApp = false;
+                    isForeground_ = false;
                     break;
             }
             break;
     }
+    events_->publishEvent(EVID_SDL_EVENT, ev);
 }

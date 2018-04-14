@@ -7,17 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CB2FF391A4BD0D100A7815C /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB2FF381A4BD0D100A7815C /* SDL2.framework */; };
 		3CB2FF481A4BD17E00A7815C /* ComponentManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF3B1A4BD17E00A7815C /* ComponentManager.cpp */; };
 		3CB2FF491A4BD17E00A7815C /* EventManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF3F1A4BD17E00A7815C /* EventManager.cpp */; };
-		3CB2FF4A1A4BD17E00A7815C /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF431A4BD17E00A7815C /* Game.cpp */; };
 		3CB2FF4E1A4BD25B00A7815C /* SDLGameLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB2FF4C1A4BD25B00A7815C /* SDLGameLoop.cpp */; };
 		3CDE59971A4BCD4400C744FB /* MacMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CDE59961A4BCD4400C744FB /* MacMain.cpp */; };
 		3CDE59991A4BCD4400C744FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CDE59981A4BCD4400C744FB /* Images.xcassets */; };
+		91061F522081B40700D74E41 /* SDLRenderer2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91061F502081B40700D74E41 /* SDLRenderer2D.cpp */; };
+		91061F552081BC9D00D74E41 /* TestRenderer2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91061F532081BC9D00D74E41 /* TestRenderer2D.cpp */; };
+		91061F592081C4DD00D74E41 /* SDL2_gfx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91061F572081C4DD00D74E41 /* SDL2_gfx.framework */; };
+		91061F5C2081C54B00D74E41 /* SDL2_gfx.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91061F572081C4DD00D74E41 /* SDL2_gfx.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91061F6020822EED00D74E41 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91061F5E20822EED00D74E41 /* SDL2.framework */; };
+		91061F652082383100D74E41 /* Breakout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91061F632082383100D74E41 /* Breakout.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		91061F5D2081C54B00D74E41 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91061F5C2081C54B00D74E41 /* SDL2_gfx.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		3CB2FF381A4BD0D100A7815C /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = "../phoenix-dependencies/SDL2.framework"; sourceTree = "<group>"; };
 		3CB2FF3B1A4BD17E00A7815C /* ComponentManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ComponentManager.cpp; path = Phoenix/core/ComponentManager.cpp; sourceTree = SOURCE_ROOT; };
 		3CB2FF3C1A4BD17E00A7815C /* ComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponentManager.h; path = Phoenix/core/ComponentManager.h; sourceTree = SOURCE_ROOT; };
 		3CB2FF3D1A4BD17E00A7815C /* ComponentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComponentNode.h; path = Phoenix/core/ComponentNode.h; sourceTree = SOURCE_ROOT; };
@@ -26,8 +43,6 @@
 		3CB2FF401A4BD17E00A7815C /* EventManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventManager.h; path = Phoenix/core/EventManager.h; sourceTree = SOURCE_ROOT; };
 		3CB2FF411A4BD17E00A7815C /* EventSubscriberNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventSubscriberNode.h; path = Phoenix/core/EventSubscriberNode.h; sourceTree = SOURCE_ROOT; };
 		3CB2FF421A4BD17E00A7815C /* EVID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EVID.h; path = Phoenix/core/EVID.h; sourceTree = SOURCE_ROOT; };
-		3CB2FF431A4BD17E00A7815C /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = Phoenix/core/Game.cpp; sourceTree = SOURCE_ROOT; };
-		3CB2FF441A4BD17E00A7815C /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Phoenix/core/Game.h; sourceTree = SOURCE_ROOT; };
 		3CB2FF451A4BD17E00A7815C /* IComponentLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IComponentLoader.h; path = Phoenix/core/IComponentLoader.h; sourceTree = SOURCE_ROOT; };
 		3CB2FF461A4BD17E00A7815C /* IEventSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IEventSubscriber.h; path = Phoenix/core/IEventSubscriber.h; sourceTree = SOURCE_ROOT; };
 		3CB2FF471A4BD17E00A7815C /* IGameLoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGameLoop.h; path = Phoenix/core/IGameLoop.h; sourceTree = SOURCE_ROOT; };
@@ -37,6 +52,20 @@
 		3CDE59921A4BCD4400C744FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CDE59961A4BCD4400C744FB /* MacMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MacMain.cpp; sourceTree = "<group>"; };
 		3CDE59981A4BCD4400C744FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		91061F4A2081ADC700D74E41 /* IRenderer2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IRenderer2D.h; path = Phoenix/graphics/IRenderer2D.h; sourceTree = SOURCE_ROOT; };
+		91061F4B2081AED900D74E41 /* Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		91061F4E2081B31D00D74E41 /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Point.h; path = Phoenix/graphics/Point.h; sourceTree = SOURCE_ROOT; };
+		91061F4F2081B35400D74E41 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		91061F502081B40700D74E41 /* SDLRenderer2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SDLRenderer2D.cpp; path = Phoenix/sdl/SDLRenderer2D.cpp; sourceTree = SOURCE_ROOT; };
+		91061F512081B40700D74E41 /* SDLRenderer2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SDLRenderer2D.h; path = Phoenix/sdl/SDLRenderer2D.h; sourceTree = SOURCE_ROOT; };
+		91061F532081BC9D00D74E41 /* TestRenderer2D.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestRenderer2D.cpp; path = phoenix/tests/TestRenderer2D.cpp; sourceTree = SOURCE_ROOT; };
+		91061F542081BC9D00D74E41 /* TestRenderer2D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestRenderer2D.h; path = phoenix/tests/TestRenderer2D.h; sourceTree = SOURCE_ROOT; };
+		91061F572081C4DD00D74E41 /* SDL2_gfx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_gfx.framework; path = "../phoenix-dependencies/SDL2_gfx.framework"; sourceTree = "<group>"; };
+		91061F582081C4DD00D74E41 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = "../phoenix-dependencies/SDL2.framework"; sourceTree = "<group>"; };
+		91061F5E20822EED00D74E41 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = "../phoenix-dependencies/SDL2.framework"; sourceTree = "<group>"; };
+		91061F5F20822EED00D74E41 /* SDL2_gfx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_gfx.framework; path = "../phoenix-dependencies/SDL2_gfx.framework"; sourceTree = "<group>"; };
+		91061F632082383100D74E41 /* Breakout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Breakout.cpp; path = Phoenix/tests/Breakout.cpp; sourceTree = SOURCE_ROOT; };
+		91061F642082383100D74E41 /* Breakout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Breakout.h; path = Phoenix/tests/Breakout.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CB2FF391A4BD0D100A7815C /* SDL2.framework in Frameworks */,
+				91061F6020822EED00D74E41 /* SDL2.framework in Frameworks */,
+				91061F592081C4DD00D74E41 /* SDL2_gfx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +92,6 @@
 				3CB2FF401A4BD17E00A7815C /* EventManager.h */,
 				3CB2FF411A4BD17E00A7815C /* EventSubscriberNode.h */,
 				3CB2FF421A4BD17E00A7815C /* EVID.h */,
-				3CB2FF431A4BD17E00A7815C /* Game.cpp */,
-				3CB2FF441A4BD17E00A7815C /* Game.h */,
 				3CB2FF451A4BD17E00A7815C /* IComponentLoader.h */,
 				3CB2FF461A4BD17E00A7815C /* IEventSubscriber.h */,
 				3CB2FF471A4BD17E00A7815C /* IGameLoop.h */,
@@ -76,6 +104,8 @@
 			children = (
 				3CB2FF4C1A4BD25B00A7815C /* SDLGameLoop.cpp */,
 				3CB2FF4D1A4BD25B00A7815C /* SDLGameLoop.h */,
+				91061F502081B40700D74E41 /* SDLRenderer2D.cpp */,
+				91061F512081B40700D74E41 /* SDLRenderer2D.h */,
 			);
 			name = sdl;
 			sourceTree = "<group>";
@@ -83,9 +113,11 @@
 		3CDE59851A4BCD4400C744FB = {
 			isa = PBXGroup;
 			children = (
-				3CB2FF381A4BD0D100A7815C /* SDL2.framework */,
+				91061F5F20822EED00D74E41 /* SDL2_gfx.framework */,
+				91061F5E20822EED00D74E41 /* SDL2.framework */,
 				3CDE59901A4BCD4400C744FB /* phoenix */,
 				3CDE598F1A4BCD4400C744FB /* Products */,
+				91061F562081C4DD00D74E41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +132,8 @@
 		3CDE59901A4BCD4400C744FB /* phoenix */ = {
 			isa = PBXGroup;
 			children = (
+				91061F622082371100D74E41 /* tests */,
+				91061F492081ADA800D74E41 /* graphics */,
 				3CB2FF4B1A4BD23800A7815C /* sdl */,
 				3CB2FF3A1A4BD17100A7815C /* core */,
 				3CDE59961A4BCD4400C744FB /* MacMain.cpp */,
@@ -117,6 +151,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		91061F492081ADA800D74E41 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				91061F4A2081ADC700D74E41 /* IRenderer2D.h */,
+				91061F4B2081AED900D74E41 /* Color.h */,
+				91061F4E2081B31D00D74E41 /* Point.h */,
+				91061F4F2081B35400D74E41 /* Rect.h */,
+			);
+			path = graphics;
+			sourceTree = "<group>";
+		};
+		91061F562081C4DD00D74E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91061F572081C4DD00D74E41 /* SDL2_gfx.framework */,
+				91061F582081C4DD00D74E41 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91061F622082371100D74E41 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				91061F532081BC9D00D74E41 /* TestRenderer2D.cpp */,
+				91061F542081BC9D00D74E41 /* TestRenderer2D.h */,
+				91061F632082383100D74E41 /* Breakout.cpp */,
+				91061F642082383100D74E41 /* Breakout.h */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +192,7 @@
 				3CDE598A1A4BCD4400C744FB /* Sources */,
 				3CDE598B1A4BCD4400C744FB /* Frameworks */,
 				3CDE598C1A4BCD4400C744FB /* Resources */,
+				91061F5D2081C54B00D74E41 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,7 +209,7 @@
 		3CDE59861A4BCD4400C744FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Caleb Everett";
 				TargetAttributes = {
 					3CDE598D1A4BCD4400C744FB = {
@@ -185,11 +251,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91061F522081B40700D74E41 /* SDLRenderer2D.cpp in Sources */,
 				3CB2FF491A4BD17E00A7815C /* EventManager.cpp in Sources */,
+				91061F652082383100D74E41 /* Breakout.cpp in Sources */,
 				3CB2FF4E1A4BD25B00A7815C /* SDLGameLoop.cpp in Sources */,
 				3CDE59971A4BCD4400C744FB /* MacMain.cpp in Sources */,
 				3CB2FF481A4BD17E00A7815C /* ComponentManager.cpp in Sources */,
-				3CB2FF4A1A4BD17E00A7815C /* Game.cpp in Sources */,
+				91061F552081BC9D00D74E41 /* TestRenderer2D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,20 +272,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -230,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -245,13 +323,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -260,13 +346,14 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -284,6 +371,7 @@
 				);
 				INFOPLIST_FILE = phoenix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.everettcaleb.phoenix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -300,6 +388,7 @@
 				);
 				INFOPLIST_FILE = phoenix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.everettcaleb.phoenix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
