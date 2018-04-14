@@ -2,7 +2,7 @@
 #ifndef INCLUDE_PHOENIX_RECT_H
 #define INCLUDE_PHOENIX_RECT_H
 
-typedef struct Rect
+struct Rect
 {
     int x;
     int y;

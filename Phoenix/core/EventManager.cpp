@@ -107,7 +107,7 @@ void EventManager::publishEvent(EVID eventId, void *data)
     EventSubscriberNode *node = firstNode_;
     while (node != 0)
     {
-        node->subscriber->HandleEvent(eventId, data);
+        node->subscriber->handleEvent(eventId, data);
         node = node->next;
     }
 }

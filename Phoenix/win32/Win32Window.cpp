@@ -1,5 +1,4 @@
 #include "Win32Window.h"
-#include "../core/Game.h"
 
 #define PHOENIX_WIN32WINDOW_CLASS_NAME TEXT("PhoenixCoreWin32Window")
 #define PHOENIX_WIN32WINDOW_TEXT TEXT("PHOENIX")
@@ -8,19 +7,12 @@ static LRESULT CALLBACK PhoenixWndProc(HWND windowHandle, UINT message, WPARAM w
 
 //========================================================================================================
 
-Win32Window::~Win32Window() 
-{
-    DestroyWindow(windowHandle_);
-}
-
-//========================================================================================================
-
-Win32Window *Win32Window::create(HINSTANCE instanceHandle)
+Win32Window::Win32Window(const ComponentManager *components, HINSTANCE instanceHandle)
 {
     //Allocate the object
-    Win32Window *window = new Win32Window;
-    window->instanceHandle_ = instanceHandle;
-    window->windowHandle_ = 0;
+    instanceHandle_ = instanceHandle;
+    windowHandle_ = 0;
+	events_ = (EventManager*)components->queryComponent(CUID_EVENTMANAGER);
 
     //Create the "window class"
     WNDCLASSEX wndClass;
@@ -38,18 +30,22 @@ Win32Window *Win32Window::create(HINSTANCE instanceHandle)
     //Register the class
     if (!RegisterClassEx(&wndClass))
     {
-        delete window;
-        return 0;
+        // TODO: throw an exception here
     }
 
     //Create the Window
-    window->windowHandle_ = CreateWindow(PHOENIX_WIN32WINDOW_CLASS_NAME, PHOENIX_WIN32WINDOW_TEXT, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, instanceHandle, window);
+    windowHandle_ = CreateWindow(PHOENIX_WIN32WINDOW_CLASS_NAME, PHOENIX_WIN32WINDOW_TEXT, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 800, 600, NULL, NULL, instanceHandle, this);
 
     //Show it
-    ShowWindow(window->windowHandle_, SW_SHOWDEFAULT);
-    UpdateWindow(window->windowHandle_);
+    ShowWindow(windowHandle_, SW_SHOWDEFAULT);
+    UpdateWindow(windowHandle_);
+}
 
-    return window;
+//========================================================================================================
+
+Win32Window::~Win32Window()
+{
+	DestroyWindow(windowHandle_);
 }
 
 //========================================================================================================
@@ -61,7 +57,7 @@ LRESULT CALLBACK PhoenixWndProc(HWND windowHandle, UINT message, WPARAM wParam, 
     switch (message) 
     {
     case WM_CREATE:
-        SetWindowLongPtr(windowHandle, GWLP_USERDATA, lParam);
+        SetWindowLongPtr(windowHandle, GWLP_USERDATA, (LONG_PTR)((CREATESTRUCT*)lParam)->lpCreateParams);
         break;
 
     case WM_DESTROY:
@@ -71,13 +67,11 @@ LRESULT CALLBACK PhoenixWndProc(HWND windowHandle, UINT message, WPARAM wParam, 
     case WM_ACTIVATE:
         if (LOWORD(wParam) != 0) 
         {
-            Game::IsForegroundApp = true;
-            Game::Events->publishEvent(EVID_SWITCH_TO_FOREGROUND, 0);
+			window->getEventManager()->publishEvent(EVID_SWITCH_TO_FOREGROUND, 0);
         }
         else 
         {
-            Game::IsForegroundApp = false;
-            Game::Events->publishEvent(EVID_SWITCH_TO_BACKGROUND, 0);
+            window->getEventManager()->publishEvent(EVID_SWITCH_TO_BACKGROUND, 0);
         }
         break;
     }

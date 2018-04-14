@@ -14,6 +14,7 @@ public:
     virtual ~IGameLoop() {}
 
     virtual float getDeltaTime() const = 0;
+	virtual bool isForeground() const = 0;
 
     virtual void run() = 0;
 };

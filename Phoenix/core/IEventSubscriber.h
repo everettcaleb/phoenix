@@ -15,7 +15,7 @@ protected:
 public:
     virtual ~IEventSubscriber() {}
 
-    virtual void HandleEvent(EVID eventId, void *data) = 0;
+    virtual void handleEvent(const EVID eventId, void *data) = 0;
 };
 
 #endif //INCLUDE_PHOENIX_IEVENTSUBSCRIBER_H

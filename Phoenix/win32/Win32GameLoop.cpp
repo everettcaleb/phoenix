@@ -1,5 +1,19 @@
 #include "Win32GameLoop.h"
-#include "../core/Game.h"
+
+Win32GameLoop::Win32GameLoop(const ComponentManager *components)
+{
+	deltaTime_ = 0.0f;
+	isForeground_ = true;
+	events_ = (EventManager*)components->queryComponent(CUID_EVENTMANAGER);
+	events_->registerSubscriber(this);
+}
+
+//========================================================================================================
+
+Win32GameLoop::~Win32GameLoop()
+{
+	events_->unregisterSubscriber(this);
+}
 
 //========================================================================================================
 
@@ -17,7 +31,7 @@ void Win32GameLoop::run()
 
     while (message.message != WM_QUIT)
     {
-        if (Game::IsForegroundApp)
+        if (isForeground_)
         {
             if (PeekMessage(&message, NULL, 0, 0, PM_REMOVE))
             {
@@ -33,8 +47,8 @@ void Win32GameLoop::run()
                 deltaTime_ = (float)((double)(timerTick.QuadPart - lastTick.QuadPart) / (double)timerFrequency.QuadPart);
                 deltaTime_ = min(deltaTime_, 0.5f);
 
-                Game::Events->publishEvent(EVID_TICK, 0);
-                Game::Events->publishQueuedEvents();
+                events_->publishEvent(EVID_TICK, 0);
+                events_->publishQueuedEvents();
             }
         }
         else 
@@ -44,4 +58,19 @@ void Win32GameLoop::run()
             DispatchMessage(&message);
         }
     }
+}
+
+//========================================================================================================
+
+void Win32GameLoop::handleEvent(const EVID eventId, void *eventData)
+{
+	switch (eventId)
+	{
+	case EVID_SWITCH_TO_FOREGROUND:
+		isForeground_ = true;
+	case EVID_SWITCH_TO_BACKGROUND:
+		isForeground_ = false;
+	default:
+		return;
+	}
 }

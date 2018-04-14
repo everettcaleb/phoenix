@@ -11,14 +11,17 @@
     <ClCompile Include="core\ComponentManager.cpp">
       <Filter>core</Filter>
     </ClCompile>
-    <ClCompile Include="core\Game.cpp">
-      <Filter>core</Filter>
-    </ClCompile>
     <ClCompile Include="win32\Win32GameLoop.cpp">
       <Filter>win32</Filter>
     </ClCompile>
     <ClCompile Include="core\EventManager.cpp">
       <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\Breakout.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\TestRenderer2D.cpp">
+      <Filter>tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -27,6 +30,12 @@
     </Filter>
     <Filter Include="core">
       <UniqueIdentifier>{c879e4de-724d-4f0c-b043-052f3cf4ac55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{fdb989b0-f6df-410b-b032-e249dd650f13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{f2e702e6-9aa8-4030-86aa-612d4d45c6b2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,9 +46,6 @@
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\ComponentNode.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="core\Game.h">
       <Filter>core</Filter>
     </ClInclude>
     <ClInclude Include="core\IComponentLoader.h">
@@ -65,6 +71,24 @@
     </ClInclude>
     <ClInclude Include="core\EventSubscriberNode.h">
       <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Color.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\IRenderer2D.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Point.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\Rect.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\Breakout.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\TestRenderer2D.h">
+      <Filter>tests</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

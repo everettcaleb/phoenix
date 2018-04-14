@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -22,31 +22,32 @@
     <ProjectGuid>{60A8AC4A-4B40-4300-94D8-37A5633BE22A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Phoenix</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -189,7 +190,8 @@
   <ItemGroup>
     <ClCompile Include="core\ComponentManager.cpp" />
     <ClCompile Include="core\EventManager.cpp" />
-    <ClCompile Include="core\Game.cpp" />
+    <ClCompile Include="tests\Breakout.cpp" />
+    <ClCompile Include="tests\TestRenderer2D.cpp" />
     <ClCompile Include="win32\Win32ComponentLoader.cpp" />
     <ClCompile Include="win32\Win32GameLoop.cpp" />
     <ClCompile Include="win32\Win32Window.cpp" />
@@ -202,10 +204,15 @@
     <ClInclude Include="core\EventManager.h" />
     <ClInclude Include="core\EventSubscriberNode.h" />
     <ClInclude Include="core\EVID.h" />
-    <ClInclude Include="core\Game.h" />
     <ClInclude Include="core\IComponentLoader.h" />
     <ClInclude Include="core\IEventSubscriber.h" />
     <ClInclude Include="core\IGameLoop.h" />
+    <ClInclude Include="graphics\Color.h" />
+    <ClInclude Include="graphics\IRenderer2D.h" />
+    <ClInclude Include="graphics\Point.h" />
+    <ClInclude Include="graphics\Rect.h" />
+    <ClInclude Include="tests\Breakout.h" />
+    <ClInclude Include="tests\TestRenderer2D.h" />
     <ClInclude Include="win32\Win32GameLoop.h" />
     <ClInclude Include="win32\Win32Window.h" />
   </ItemGroup>
